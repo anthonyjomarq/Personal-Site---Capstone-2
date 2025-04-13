@@ -5,30 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anthony's Personal Site</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <nav class="nav-container">
+          <ul class="nav-list">
+              <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+              <li class="nav-item"><a href="#resume" class="nav-link">Resume</a></li>
+              <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+              <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
       </nav>
     </header>
 
     <main>
       <section id="hero">
-        <h1>Welcome to My Website</h1>
-        <p>A brief introduction about me.</p>
-        <img src="./assets/images/Anthony profile.jpeg" alt="Photo of me" />
+        <div class="hero-content">
+            <h1>Hey, I'm Anthony!</h1>
+            <p>Aspiring full-stack developer crafting code and chasing wins. I’m all about pushing limits.</p>
+            <div class="hero-img-container">
+              <img src="./assets/images/Anthony profile.jpeg" alt="Anthony profile pic" class="hero-img">
+              <a href="#contact" class="hero-button">Get in Touch</a>
+            </div>
+        </div>
       </section>
+
       <section id="resume">
         <h2>Resume</h2>
         <div class="resume-content">
-          <!-- Objective -->
           <h3>Objective</h3>
           <hr />
           <p>
@@ -37,23 +45,20 @@
             PostgreSQL, and SQL to build dynamic, scalable web applications.
           </p>
 
-          <!-- Education -->
           <h3>Education</h3>
           <hr />
           <h4>University of St. Thomas, Houston, TX</h4>
           <ul>
-            B.S. in Computer Science, May 2024
+            <li> B.S. in Computer Science, May 2024</li>
           </ul>
 
-          <!-- Professional Experience -->
           <h3>Professional Experience</h3>
           <hr />
           <h4>Implementations Specialist I, Dynamics Payments</h4>
           <p>San Juan, PR | Nov 2024 - Present</p>
           <ul>
             <li>
-              Deploy and configure POS systems, reducing setup time by 70% using
-              Python/SikuliX automation.
+              Deploy and configure POS systems.
             </li>
             <li>Train merchants and troubleshoot technical issues.</li>
           </ul>
@@ -64,57 +69,100 @@
             <li>Analyzed usage data to recommend improvements.</li>
           </ul>
 
-          <!-- Skills -->
           <h3>Skills</h3>
           <hr />
           <ul>
-            <li>
-              <strong>Programming:</strong> Java, C/C++, JavaScript, Python,
-              HTML, CSS, SQL
-            </li>
-            <li>
-              <strong>Frameworks & Tools:</strong> Node.js, Express.js, React.js
-            </li>
-            <li>
-              <strong>Databases & DevOps:</strong> PostgreSQL, Git, AWS, REST
-              APIs
-            </li>
-            <li>
-              <strong>Other:</strong> Problem-solving, Bilingual
-              (English/Spanish), Data Analysis
-            </li>
+            <li><strong>Programming:</strong> Java, C/C++, JavaScript, Python, HTML, CSS, SQL</li>
+            <li><strong>Frameworks & Tools:</strong> Node.js, Express.js, React.js</li>
+            <li><strong>Databases & DevOps:</strong> PostgreSQL, Git, AWS, REST APIs</li>
+            <li><strong>Other:</strong> Problem-solving, Bilingual (English/Spanish), Data Analysis</li>
           </ul>
 
-          <!-- Achievements -->
-          <h3>Achievements</h3>
+          <h3>Fun fact</h3>
           <hr />
           <ul>
-            <li>
-              Gaming Scholarship Recipient and Team Captain, University of St.
-              Thomas
-            </li>
-            <li>
-              Featured in
-              <a
-                href="https://www.houstonchronicle.com/news/houston-texas/education/article/With-eyes-set-on-the-national-championship-16500799.php"
-                >Houston Chronicle</a
-              >
-            </li>
+            <li>Featured in <a href="https://www.houstonchronicle.com/news/houston-texas/education/article/With-eyes-set-on-the-national-championship-16500799.php">Houston Chronicle</a></li>
           </ul>
         </div>
       </section>
+
       <section id="projects">
         <h2>Projects</h2>
+        <div class="projects-content">
+            <div class="project-item">
+                <img src="./assets/images/accidentmodel.jpg" alt="Picture of Predictive Traffic Accident Model project" class="project-img">
+                <h3>Predictive Traffic Accident Model</h3>
+                <p>Built a Python model to forecast traffic accidents with 20% better precision, analyzing historical data to enhance road safety.</p>
+                <a href="https://github.com/anthonyjomarq/Predictive-Traffic-Accident-Model" class="project-link" target="_blank">View on GitHub</a>
+            </div>
+            <p class="more-projects">More exciting projects are in the works—stay tuned!</p>
+        </div>
       </section>
+
       <section id="about">
-        <h2>About Me</h2>
+          <h2>About Me</h2>
+          <div class="about-content">
+              <p>Hi, I'm Anthony! I live for pushing my limits—whether it’s crushing it in the gym, dominating in video games, or chasing victory in everything I do. Check out my passions and some epic wins from my esports journey below.</p>
+              <div class="passions">
+                  <div class="passion-item">
+                      <img src="./assets/images/gymanthony.jpg" alt="Anthony working out in the gym" class="passion-img">
+                      <h3>Working Out</h3>
+                      <p>Lifting weights keeps me strong and ready for any challenge.</p>
+                  </div>
+                  <div class="passion-item">
+                      <img src="./assets/images/Tiger.jpeg" alt="Anthony gaming in Valorant" class="passion-img">
+                      <h3>Video Games</h3>
+                      <p>From Valorant to other titles, gaming is where I shine.</p>
+                  </div>
+                  <div class="passion-item">
+                      <img src="./assets/images/winninganthony.jpg" alt="Anthony celebrating a victory" class="passion-img">
+                      <h3>Winning</h3>
+                      <p>The thrill of victory drives me to compete and conquer.</p>
+                  </div>
+              </div>
+
+              <h3>My Esports Journey</h3>
+              <ul class="about-highlights">
+                  <li class="highlight">
+                      <span class="icon">🎮</span> Esports Scholarship, University of St. Thomas
+                  </li>
+                  <li class="highlight">
+                      <span class="icon">🏆</span> Elected Captain & Won HUEFest 2023
+                  </li>
+                  <li class="highlight">
+                      <span class="icon">🔥</span> Champion, Texas Red Bull & Other Events
+                  </li>
+              </ul>
+          </div>
       </section>
-      <section id="contact">
-        <h2>Contact Me</h2>
+
+      </section>
+            <section id="contact">
+          <h2>Contact Me</h2>
+          <div class="contact-content">
+              <p>Let's connect! Reach out to discuss projects, opportunities, or just to say hi.</p>
+              <ul class="contact-links">
+                  <li>
+                      <a href="mailto:anthonyjomar441@gmail.com" class="contact-link email">
+                          <span class="icon">✉️</span> Email
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://www.linkedin.com/in/anthonyjomarq/" class="contact-link linkedin" target="_blank">
+                          <span class="icon">🔗</span> LinkedIn
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://github.com/anthonyjomarq" class="contact-link github" target="_blank">
+                          <span class="icon">💻</span> GitHub
+                      </a>
+                  </li>
+              </ul>
+          </div>
       </section>
     </main>
+
     <footer>
-      <hr />
       <p>© 2025 Anthony J. Colon Dominguez. All rights reserved.</p>
     </footer>
   </body>
