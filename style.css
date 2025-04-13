@@ -1,0 +1,134 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  background-color: #333;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
+
+/* Sections */
+section {
+  padding: 20px;
+  margin: 20px 0;
+  background-color: white;
+}
+
+/* Hero section */
+#hero {
+  text-align: center;
+}
+
+#hero img {
+  width: 300px;
+  height: auto;
+}
+/*Resume section*/
+#resume {
+  padding: 20px;
+  margin: 20px 0;
+  background-color: white;
+}
+
+.resume-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#resume h2 {
+  text-align: center;
+  color: #333;
+}
+
+#resume h3 {
+  color: #007bff;
+  margin-top: 20px;
+}
+
+#resume h4 {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+#resume hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+#resume p {
+  line-height: 1.6;
+}
+
+#resume ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.resume-link {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.resume-link:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resume-content {
+    padding: 0 10px;
+  }
+  #resume h2,
+  #resume h3 {
+    font-size: 1.5em;
+  }
+}
+/* Projects section */
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project {
+  width: 30%;
+  margin: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  .project {
+    width: 100%;
+  }
+}
