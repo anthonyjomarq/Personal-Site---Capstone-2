@@ -3,186 +3,908 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anthony's Personal Site</title>
+    <meta name="description" content="Anthony Colon - Full-stack developer, esports champion, and CS graduate. Explore my portfolio featuring web development projects, resume, and achievements." />
+    <meta name="keywords" content="Anthony Colon, full-stack developer, web developer, esports, computer science, portfolio, JavaScript, React, Node.js" />
+    <meta name="author" content="Anthony J. Colon Dominguez" />
+    <meta property="og:title" content="Anthony's Portfolio - Full-Stack Developer & Esports Champion" />
+    <meta property="og:description" content="Aspiring full-stack developer with expertise in JavaScript, React, Node.js. Esports scholarship recipient and CS graduate." />
+    <meta property="og:image" content="./assets/images/Anthony profile.jpeg" />
+    <meta property="og:url" content="#" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Anthony Colon - Full-Stack Developer & Tech Innovator</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/Anthony profile.jpeg" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
     <header>
       <nav class="nav-container">
+          <div class="nav-brand">
+              <span class="brand-name">AC</span>
+          </div>
           <ul class="nav-list">
-              <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
-              <li class="nav-item"><a href="#resume" class="nav-link">Resume</a></li>
-              <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-              <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-              <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+              <li class="nav-item"><a href="#hero" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+              <li class="nav-item"><a href="#resume" class="nav-link"><i class="fas fa-file-alt"></i> Resume</a></li>
+              <li class="nav-item"><a href="#projects" class="nav-link"><i class="fas fa-code"></i> Projects</a></li>
+              <li class="nav-item"><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+              <li class="nav-item"><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
           </ul>
+          <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+              <i class="fas fa-moon toggle-icon"></i>
+          </button>
       </nav>
     </header>
 
     <main>
       <section id="hero">
-        <div class="hero-content">
-            <h1>Hey, I'm Anthony!</h1>
-            <p>Aspiring full-stack developer crafting code and chasing wins. I’m all about pushing limits.</p>
-            <div class="hero-img-container">
-              <img src="./assets/images/Anthony profile.jpeg" alt="Anthony profile pic" class="hero-img">
-              <a href="#contact" class="hero-button">Get in Touch</a>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-greeting">Hello, I'm</span>
+                    <h1 class="hero-name">Anthony Colon</h1>
+                    <h2 class="hero-title">Full-Stack Developer & Tech Innovator</h2>
+                    <p class="hero-description">Passionate about creating exceptional digital experiences through clean code, innovative solutions, and cutting-edge technology. Let's build something amazing together.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View My Work</a>
+                        <a href="#contact" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Get in Touch</a>
+                        <a href="#" class="btn btn-outline" onclick="downloadResume()"><i class="fas fa-download"></i> Download CV</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Commitment</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-img-container">
+                        <img src="./assets/images/Anthony profile.jpeg" alt="Anthony Colon - Full-Stack Developer" class="hero-img">
+                        <div class="hero-badge">
+                            <i class="fas fa-code"></i>
+                            <span>Available for Work</span>
+                        </div>
+                    </div>
+                    <div class="floating-tech">
+                        <div class="tech-icon" style="--delay: 0s"><i class="fab fa-js-square"></i></div>
+                        <div class="tech-icon" style="--delay: 0.5s"><i class="fab fa-react"></i></div>
+                        <div class="tech-icon" style="--delay: 1s"><i class="fab fa-node-js"></i></div>
+                        <div class="tech-icon" style="--delay: 1.5s"><i class="fab fa-python"></i></div>
+                        <div class="tech-icon" style="--delay: 2s"><i class="fas fa-database"></i></div>
+                    </div>
+                </div>
             </div>
         </div>
       </section>
 
       <section id="resume">
-        <h2>Resume</h2>
-        <div class="resume-content">
-          <h3>Objective</h3>
-          <hr />
-          <p>
-            Aspiring full-stack web developer with a Bachelor of Computer
-            Science, eager to master HTML, CSS, JavaScript, Node.js, React,
-            PostgreSQL, and SQL to build dynamic, scalable web applications.
-          </p>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Journey</span>
+                <h2>Professional Background</h2>
+                <p>A comprehensive overview of my skills, experience, and achievements in technology and development.</p>
+                <div class="resume-actions">
+                    <button onclick="downloadResume()" class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</button>
+                    <button onclick="window.print()" class="btn btn-outline"><i class="fas fa-print"></i> Print</button>
+                </div>
+            </div>
+            <div class="resume-content">
+                <div class="resume-section">
+                    <div class="resume-section-header">
+                        <i class="fas fa-bullseye section-icon"></i>
+                        <h3>Professional Summary</h3>
+                    </div>
+                    <div class="resume-section-content">
+                        <p>Dynamic full-stack developer with a Computer Science degree and hands-on experience in modern web technologies. Proven track record in building scalable applications, with expertise spanning from machine learning models to responsive web interfaces. Combines technical excellence with competitive drive, demonstrated through esports achievements and academic success.</p>
+                    </div>
+                </div>
 
-          <h3>Education</h3>
-          <hr />
-          <h4>University of St. Thomas, Houston, TX</h4>
-          <ul>
-            <li> B.S. in Computer Science, May 2024</li>
-          </ul>
+                <div class="resume-section">
+                    <div class="resume-section-header">
+                        <i class="fas fa-graduation-cap section-icon"></i>
+                        <h3>Education</h3>
+                    </div>
+                    <div class="resume-section-content">
+                        <div class="education-item">
+                            <div class="education-header">
+                                <h4>Bachelor of Science in Computer Science</h4>
+                                <span class="education-date">May 2024</span>
+                            </div>
+                            <p class="education-school">University of St. Thomas, Houston, TX</p>
+                            <ul class="education-highlights">
+                                <li>Esports Scholarship Recipient</li>
+                                <li>Team Captain & Tournament Winner</li>
+                                <li>Focus on Software Engineering & Data Science</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-          <h3>Professional Experience</h3>
-          <hr />
-          <h4>Implementations Specialist I, Dynamics Payments</h4>
-          <p>San Juan, PR | Nov 2024 - Present</p>
-          <ul>
-            <li>
-              Deploy and configure POS systems.
-            </li>
-            <li>Train merchants and troubleshoot technical issues.</li>
-          </ul>
-          <h4>Esports Lab Assistant / IT, University of St. Thomas</h4>
-          <p>Houston, TX | Jan 2023 - Dec 2023</p>
-          <ul>
-            <li>Troubleshot hardware/software issues for gaming systems.</li>
-            <li>Analyzed usage data to recommend improvements.</li>
-          </ul>
+                <div class="resume-section">
+                    <div class="resume-section-header">
+                        <i class="fas fa-briefcase section-icon"></i>
+                        <h3>Professional Experience</h3>
+                    </div>
+                    <div class="resume-section-content">
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <div>
+                                    <h4>Implementations Specialist I</h4>
+                                    <p class="company">Dynamics Payments</p>
+                                </div>
+                                <div class="experience-meta">
+                                    <span class="location">San Juan, PR</span>
+                                    <span class="duration">Nov 2024 - Present</span>
+                                </div>
+                            </div>
+                            <ul class="experience-responsibilities">
+                                <li>Deploy and configure POS systems for merchant clients</li>
+                                <li>Provide technical training and ongoing support to merchants</li>
+                                <li>Troubleshoot complex technical issues and system integrations</li>
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-header">
+                                <div>
+                                    <h4>Esports Lab Assistant / IT Support</h4>
+                                    <p class="company">University of St. Thomas</p>
+                                </div>
+                                <div class="experience-meta">
+                                    <span class="location">Houston, TX</span>
+                                    <span class="duration">Jan 2023 - Dec 2023</span>
+                                </div>
+                            </div>
+                            <ul class="experience-responsibilities">
+                                <li>Managed hardware/software troubleshooting for high-performance gaming systems</li>
+                                <li>Analyzed usage data and performance metrics to optimize system efficiency</li>
+                                <li>Provided technical support and maintained gaming laboratory infrastructure</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-          <h3>Skills</h3>
-          <hr />
-          <ul>
-            <li><strong>Programming:</strong> Java, C/C++, JavaScript, Python, HTML, CSS, SQL</li>
-            <li><strong>Frameworks & Tools:</strong> Node.js, Express.js, React.js</li>
-            <li><strong>Databases & DevOps:</strong> PostgreSQL, Git, AWS, REST APIs</li>
-            <li><strong>Other:</strong> Problem-solving, Bilingual (English/Spanish), Data Analysis</li>
-          </ul>
+                <div class="resume-section">
+                    <div class="resume-section-header">
+                        <i class="fas fa-code section-icon"></i>
+                        <h3>Technical Skills</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4><i class="fas fa-code"></i> Programming Languages</h4>
+                            <div class="skills-list">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Java</span>
+                                        <span class="skill-level advanced">Advanced</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-skill="85"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">JavaScript</span>
+                                        <span class="skill-level advanced">Advanced</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-skill="88"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Python</span>
+                                        <span class="skill-level advanced">Advanced</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-skill="80"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">C/C++</span>
+                                        <span class="skill-level intermediate">Intermediate</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-skill="75"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">HTML5/CSS3</span>
+                                        <span class="skill-level expert">Expert</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-skill="92"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">SQL</span>
+                                        <span class="skill-level intermediate">Intermediate</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-skill="78"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Bash</span>
+                                        <span class="skill-level intermediate">Intermediate</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-skill="70"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4><i class="fas fa-layer-group"></i> Frameworks & Libraries</h4>
+                            <div class="skills-list">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Bootstrap 5</span>
+                                        <span class="skill-level advanced">Advanced</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-skill="85"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">jQuery</span>
+                                        <span class="skill-level advanced">Advanced</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-skill="82"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Node.js</span>
+                                        <span class="skill-level advanced">Advanced</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-skill="83"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Express.js</span>
+                                        <span class="skill-level intermediate">Intermediate</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-skill="78"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">React.js</span>
+                                        <span class="skill-level intermediate">Intermediate</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-skill="75"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">EJS</span>
+                                        <span class="skill-level intermediate">Intermediate</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-skill="76"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">SikuliX</span>
+                                        <span class="skill-level intermediate">Intermediate</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-skill="72"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4><i class="fas fa-server"></i> Databases & DevOps</h4>
+                            <div class="skills-list">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">AWS</span>
+                                        <span class="skill-level intermediate">Intermediate</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-skill="74"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">PostgreSQL</span>
+                                        <span class="skill-level intermediate">Intermediate</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-skill="78"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Git</span>
+                                        <span class="skill-level advanced">Advanced</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-skill="86"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">GitHub Pages</span>
+                                        <span class="skill-level advanced">Advanced</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-skill="84"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">REST APIs</span>
+                                        <span class="skill-level intermediate">Intermediate</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-skill="80"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4><i class="fas fa-star"></i> Core Strengths</h4>
+                            <div class="core-strengths">
+                                <div class="strength-item">
+                                    <i class="fas fa-puzzle-piece"></i>
+                                    <span>Problem-solving</span>
+                                </div>
+                                <div class="strength-item">
+                                    <i class="fas fa-robot"></i>
+                                    <span>Automation</span>
+                                </div>
+                                <div class="strength-item">
+                                    <i class="fas fa-language"></i>
+                                    <span>Bilingual (English/Spanish)</span>
+                                </div>
+                                <div class="strength-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Team Leadership</span>
+                                </div>
+                                <div class="strength-item">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                    <span>Technical Training</span>
+                                </div>
+                                <div class="strength-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Data Analysis</span>
+                                </div>
+                                <div class="strength-item">
+                                    <i class="fas fa-globe"></i>
+                                    <span>Web Development</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-          <h3>Fun fact</h3>
-          <hr />
-          <ul>
-            <li>Featured in <a href="https://www.houstonchronicle.com/news/houston-texas/education/article/With-eyes-set-on-the-national-championship-16500799.php">Houston Chronicle</a></li>
-          </ul>
+                <div class="resume-section">
+                    <div class="resume-section-header">
+                        <i class="fas fa-trophy section-icon"></i>
+                        <h3>Achievements & Recognition</h3>
+                    </div>
+                    <div class="resume-section-content">
+                        <div class="achievements-grid">
+                            <div class="achievement-item">
+                                <i class="fas fa-newspaper achievement-icon"></i>
+                                <div class="achievement-content">
+                                    <h4>Media Recognition</h4>
+                                    <p>Featured in <a href="https://www.houstonchronicle.com/news/houston-texas/education/article/With-eyes-set-on-the-national-championship-16500799.php" target="_blank">Houston Chronicle</a> for esports achievements</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-medal achievement-icon"></i>
+                                <div class="achievement-content">
+                                    <h4>Esports Championships</h4>
+                                    <p>Multiple tournament victories including HUEFest 2023 and Texas Red Bull events</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-star achievement-icon"></i>
+                                <div class="achievement-content">
+                                    <h4>Leadership</h4>
+                                    <p>Elected team captain and scholarship recipient at University of St. Thomas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
       </section>
 
       <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects-content">
-            <div class="project-item">
-                <img src="./assets/images/accidentmodel.jpg" alt="Picture of Predictive Traffic Accident Model project" class="project-img">
-                <h3>Predictive Traffic Accident Model</h3>
-                <p>Built a Python model to forecast traffic accidents with 20% better precision, analyzing historical data to enhance road safety.</p>
-                <a href="https://github.com/anthonyjomarq/Predictive-Traffic-Accident-Model" class="project-link" target="_blank">View on GitHub</a>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2>Featured Projects</h2>
+                <p>A showcase of my latest work in web development, machine learning, and software engineering.</p>
             </div>
-             <div class="project-item">
-                <img src="./assets/images/anthonyblog.png" alt="Picture of Predictive Traffic Accident Model project" class="project-img">
-                <h3>Blog Web Application</h3>
-                <p>A dynamic blog app, built with Express.js and EJS. It allows users to create, edit, and delete posts about collegiate esports, featuring a dark mode toggle and responsive design.</p>
-                <a href="https://github.com/anthonyjomarq/Blog-Web-Application---Capstone-Project-3" class="project-link" target="_blank">View on GitHub</a>
+            <!-- Featured Project -->
+            <div class="featured-project-section">
+                <div class="section-subheader">
+                    <span class="section-subtitle">🌟 Featured Project</span>
+                    <h3>Latest & Greatest</h3>
+                </div>
+                
+                <div class="featured-project">
+                    <div class="featured-project-image">
+                        <img src="./assets/images/swifttiger.png" alt="SwiftTiger Field Service Management" loading="lazy">
+                        <div class="featured-overlay">
+                            <div class="featured-badges">
+                                <span class="featured-badge">
+                                    <i class="fas fa-crown"></i>
+                                    Latest Project
+                                </span>
+                                <span class="featured-badge enterprise">
+                                    <i class="fas fa-building"></i>
+                                    Enterprise Level
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-project-content">
+                        <div class="featured-header">
+                            <div class="featured-title-group">
+                                <h3>SwiftTiger Field Service Management</h3>
+                                <span class="project-type enterprise">Enterprise Application</span>
+                            </div>
+                            <div class="featured-links">
+                                <a href="https://github.com/anthonyjomarq/SwiftTiger" target="_blank" class="featured-link">
+                                    <i class="fab fa-github"></i>
+                                    <span>View Code</span>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="featured-description">
+                            A comprehensive field service management system built for enterprise use. Features role-based authentication for multiple user types, customer management with Google Places API integration, job scheduling with analytics dashboard, and Docker containerization for scalable deployment.
+                        </p>
+                        <div class="featured-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-users-cog"></i>
+                                <div class="highlight-content">
+                                    <h4>Multi-Role Authentication</h4>
+                                    <p>Admin, Manager, Dispatcher, and Technician roles with JWT security</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <div class="highlight-content">
+                                    <h4>Google Places Integration</h4>
+                                    <p>Address validation and geocoding for accurate service locations</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-chart-line"></i>
+                                <div class="highlight-content">
+                                    <h4>Analytics Dashboard</h4>
+                                    <p>Real-time metrics, job tracking, and performance visualization</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featured-tech-stack">
+                            <span class="tech-tag primary">React 18</span>
+                            <span class="tech-tag primary">Node.js</span>
+                            <span class="tech-tag primary">PostgreSQL</span>
+                            <span class="tech-tag secondary">Docker</span>
+                            <span class="tech-tag secondary">JWT Auth</span>
+                            <span class="tech-tag secondary">Google API</span>
+                            <span class="tech-tag secondary">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="project-item">
-              <img src="./assets/images/route-optimizer.png" alt="Picture of Predictive Traffic Accident Model project" class="project-img">
-              <h3>Route Optimer Application</h3>
-              <p>A web application that optimizes delivery routes with multiple stops using Google Maps API and Node.js</p>
-              <a href="https://github.com/anthonyjomarq/Route-Optimizer---Capstone-4" class="project-link" target="_blank">View on GitHub</a>
-          </div>
-          <div class="project-item">
-            <img src="./assets/images/mediareview.png" alt="Picture of Media review project" class="project-img">
-            <h3>Media Review</h3>
-            <p>Media review tracker for movies, TV shows & anime. Bootcamp capstone project with multi-API search and PostgreSQL database.</p>
-            <a href="https://github.com/anthonyjomarq/Movie-review---Capstone-5" class="project-link" target="_blank">View on GitHub</a>
+
+            <!-- Other Projects -->
+            <div class="other-projects-section">
+                <div class="section-subheader">
+                    <span class="section-subtitle">💼 Additional Projects</span>
+                    <h3>More Great Work</h3>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card capstone">
+                        <div class="project-image">
+                            <img src="./assets/images/mediareview.png" alt="Media Review Application" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/anthonyjomarq/Movie-review---Capstone-5" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Media Review Tracker</h3>
+                                <span class="project-type capstone">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    Capstone Project
+                                </span>
+                            </div>
+                            <p>Full-stack media tracking application for movies, TV shows, and anime. Features multi-API integration, PostgreSQL database, and comprehensive user authentication system.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">APIs</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Database Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card ml">
+                        <div class="project-image">
+                            <img src="./assets/images/accidentmodel.jpg" alt="Predictive Traffic Accident Model" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/anthonyjomarq/Predictive-Traffic-Accident-Model" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Predictive Traffic Model</h3>
+                                <span class="project-type ml">
+                                    <i class="fas fa-brain"></i>
+                                    Machine Learning
+                                </span>
+                            </div>
+                            <p>Advanced Python model for traffic accident prediction with 20% improved precision. Analyzes historical data patterns to enhance road safety measures.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">Data Analysis</span>
+                                <span class="tech-tag">Pandas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card api">
+                        <div class="project-image">
+                            <img src="./assets/images/route-optimizer.png" alt="Route Optimizer Application" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/anthonyjomarq/Route-Optimizer---Capstone-4" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Route Optimizer</h3>
+                                <span class="project-type api">
+                                    <i class="fas fa-route"></i>
+                                    API Integration
+                                </span>
+                            </div>
+                            <p>Intelligent delivery route optimization using Google Maps API. Calculates efficient multi-stop routes for logistics and delivery services.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Google Maps API</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Algorithms</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-footer">
+                <p>More exciting projects in development. <a href="https://github.com/anthonyjomarq" target="_blank" class="text-link">View all on GitHub <i class="fas fa-external-link-alt"></i></a></p>
+            </div>
         </div>
-            <p class="more-projects">More exciting projects are in the works—stay tuned!</p>
-        </div>
-       
       </section>
 
       <section id="about">
-          <h2>About Me</h2>
-          <div class="about-content">
-              <p>Hi, I'm Anthony! I live for pushing my limits—whether it’s crushing it in the gym, dominating in video games, or chasing victory in everything I do. Check out my passions and some epic wins from my esports journey below.</p>
-              <div class="passions">
-                  <div class="passion-item">
-                      <img src="./assets/images/gymanthony.jpg" alt="Anthony working out in the gym" class="passion-img">
-                      <h3>Working Out</h3>
-                      <p>Lifting weights keeps me strong and ready for any challenge.</p>
-                  </div>
-                  <div class="passion-item">
-                      <img src="./assets/images/Tiger.jpeg" alt="Anthony gaming in Valorant" class="passion-img">
-                      <h3>Video Games</h3>
-                      <p>From Valorant to other titles, gaming is where I shine.</p>
-                  </div>
-                  <div class="passion-item">
-                      <img src="./assets/images/winninganthony.jpg" alt="Anthony celebrating a victory" class="passion-img">
-                      <h3>Winning</h3>
-                      <p>The thrill of victory drives me to compete and conquer.</p>
-                  </div>
-              </div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get to know me</span>
+                <h2>About Anthony</h2>
+                <p>Beyond the code - my passions, achievements, and what drives me to excel.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-intro">
+                    <div class="about-text">
+                        <h3>Driven by Excellence</h3>
+                        <p>I'm Anthony, a passionate developer who thrives on challenges and pursues excellence in everything I do. Whether I'm crafting clean, efficient code or competing at the highest levels in esports, I bring the same dedication and strategic thinking to every endeavor.</p>
+                        <p>My journey combines technical expertise with competitive spirit - from earning my Computer Science degree and esports scholarship to building innovative applications that solve real-world problems.</p>
+                        <div class="personal-values">
+                            <div class="value-item">
+                                <i class="fas fa-target"></i>
+                                <span>Goal-Oriented</span>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-users"></i>
+                                <span>Team Player</span>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Innovative</span>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>Competitive</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="about-image-container">
+                            <img src="./assets/images/Anthony profile.jpeg" alt="Anthony Colon" class="about-main-image">
+                        </div>
+                    </div>
+                </div>
 
-              <h3>My Esports Journey</h3>
-              <ul class="about-highlights">
-                  <li class="highlight">
-                      <span class="icon">🎮</span> Esports Scholarship, University of St. Thomas
-                  </li>
-                  <li class="highlight">
-                      <span class="icon">🏆</span> Elected Captain & Won HUEFest 2023
-                  </li>
-                  <li class="highlight">
-                      <span class="icon">🔥</span> Champion, Texas Red Bull & Other Events
-                  </li>
-              </ul>
-          </div>
+                <div class="passions-section">
+                    <h3>What Drives Me</h3>
+                    <div class="passions-grid">
+                        <div class="passion-card">
+                            <div class="passion-image">
+                                <img src="./assets/images/gymanthony.jpg" alt="Anthony working out" loading="lazy">
+                            </div>
+                            <div class="passion-content">
+                                <h4><i class="fas fa-dumbbell"></i> Fitness & Training</h4>
+                                <p>Maintaining physical and mental strength through consistent training. The discipline and perseverance I develop in the gym translates directly to my approach in software development.</p>
+                            </div>
+                        </div>
+                        <div class="passion-card">
+                            <div class="passion-image">
+                                <img src="./assets/images/Tiger.jpeg" alt="Anthony gaming" loading="lazy">
+                            </div>
+                            <div class="passion-content">
+                                <h4><i class="fas fa-gamepad"></i> Competitive Gaming</h4>
+                                <p>Strategic thinking and quick decision-making in high-pressure environments. Gaming has taught me teamwork, leadership, and the importance of continuous improvement.</p>
+                            </div>
+                        </div>
+                        <div class="passion-card">
+                            <div class="passion-image">
+                                <img src="./assets/images/winninganthony.jpg" alt="Anthony celebrating victory" loading="lazy">
+                            </div>
+                            <div class="passion-content">
+                                <h4><i class="fas fa-trophy"></i> Achieving Excellence</h4>
+                                <p>The pursuit of victory and excellence drives everything I do. Whether it's writing optimal code or leading a team to championship, I'm committed to achieving the best possible outcomes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievements-section">
+                    <h3>Notable Achievements</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-newspaper"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Featured in Houston Chronicle</h4>
+                                <p>Media coverage for esports achievements and leadership</p>
+                                <span class="timeline-date">2021</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Team Captain & HUEFest Champion</h4>
+                                <p>Elected team captain and led team to victory at HUEFest 2023</p>
+                                <span class="timeline-date">2023</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Multiple Tournament Victories</h4>
+                                <p>Champion at Texas Red Bull events and other competitive tournaments</p>
+                                <span class="timeline-date">2022-2023</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Esports Scholarship Recipient</h4>
+                                <p>Earned full esports scholarship at University of St. Thomas</p>
+                                <span class="timeline-date">2020-2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
       </section>
 
-      </section>
-            <section id="contact">
-          <h2>Contact Me</h2>
-          <div class="contact-content">
-              <p>Let's connect! Reach out to discuss projects, opportunities, or just to say hi.</p>
-              <ul class="contact-links">
-                  <li>
-                      <a href="mailto:anthonyjomar441@gmail.com" class="contact-link email">
-                          <span class="icon">✉️</span> Email
-                      </a>
-                  </li>
-                  <li>
-                      <a href="https://www.linkedin.com/in/anthonyjomarq/" class="contact-link linkedin" target="_blank">
-                          <span class="icon">🔗</span> LinkedIn
-                      </a>
-                  </li>
-                  <li>
-                      <a href="https://github.com/anthonyjomarq" class="contact-link github" target="_blank">
-                          <span class="icon">💻</span> GitHub
-                      </a>
-                  </li>
-              </ul>
-          </div>
+      <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Let's Connect</span>
+                <h2>Get In Touch</h2>
+                <p>Ready to collaborate? Let's discuss your next project or explore opportunities together.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-grid">
+                    <div class="contact-form-section">
+                        <div class="contact-form-header">
+                            <h3><i class="fas fa-paper-plane"></i> Send a Message</h3>
+                            <p>Have a project in mind? Let's talk about how we can work together.</p>
+                        </div>
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name *</label>
+                                    <input type="text" id="name" name="name" required>
+                                    <span class="error-message" id="name-error"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                    <span class="error-message" id="email-error"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <input type="text" id="subject" name="subject" required>
+                                <span class="error-message" id="subject-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project or opportunity..."></textarea>
+                                <span class="error-message" id="message-error"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info-section">
+                        <div class="contact-info-header">
+                            <h3><i class="fas fa-address-card"></i> Contact Information</h3>
+                            <p>Prefer direct contact? Here are all the ways to reach me.</p>
+                        </div>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h4>Email</h4>
+                                    <p>anthonyjomar441@gmail.com</p>
+                                    <a href="mailto:anthonyjomar441@gmail.com" class="contact-link">Send Email</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h4>LinkedIn</h4>
+                                    <p>Professional networking</p>
+                                    <a href="https://www.linkedin.com/in/anthonyjomarq/" target="_blank" class="contact-link">Connect</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="method-content">
+                                    <h4>GitHub</h4>
+                                    <p>Code repositories & projects</p>
+                                    <a href="https://github.com/anthonyjomarq" target="_blank" class="contact-link">View Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="resume-download-section">
+                            <h4><i class="fas fa-file-download"></i> Resume</h4>
+                            <p>Download my complete professional resume</p>
+                            <button onclick="downloadResume()" class="btn btn-outline">
+                                <i class="fas fa-download"></i>
+                                Download Resume
+                            </button>
+                        </div>
+                        
+                        <div class="availability-status">
+                            <div class="status-indicator">
+                                <div class="status-dot available"></div>
+                                <span>Available for new opportunities</span>
+                            </div>
+                            <p>Currently open to full-time positions and freelance projects</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>© 2025 Anthony J. Colon Dominguez. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-brand">
+                        <span class="brand-name">AC</span>
+                        <span class="brand-text">Anthony Colon</span>
+                    </div>
+                    <p>Full-Stack Developer & Tech Innovator</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#resume">Resume</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="mailto:anthonyjomar441@gmail.com">Email</a></li>
+                            <li><a href="https://www.linkedin.com/in/anthonyjomarq/" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://github.com/anthonyjomarq" target="_blank">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/anthonyjomarq/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/anthonyjomarq" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:anthonyjomar441@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Anthony J. Colon Dominguez. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+    
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="./script.js"></script>
   </body>
 </html>
