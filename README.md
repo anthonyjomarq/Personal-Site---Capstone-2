@@ -1,11 +1,55 @@
-# Personal Website - Capstone 2
+# Personal Portfolio
 
-Personal site showcasing my journey as a 2024 CS grad and esports champ. Built with HTML and CSS, it highlights my coding skills, resume, projects, and passions—coding, gaming, and fitness.
+Professional portfolio website showcasing my work as a full-stack developer.
+
+## Live Site
+
+https://anthonyjomarq.github.io/Personal-Site---Capstone-2/
 
 ## Features
-- **Hero**: Profile pic with "Get in Touch" button.
-- **Resume**: Education, jobs, and skills.
-- **Projects**: Web dev work with images.
-- **About**: My story and passions.
-- **Contact**: Email, LinkedIn, GitHub links.
-- **Responsive**: Mobile-friendly design.
+
+- Responsive design optimized for all devices
+- Dark mode support with localStorage persistence
+- Fast page load times with vanilla JavaScript
+- Accessible navigation and form validation
+- SEO optimized with meta tags and structured data
+
+## Tech Stack
+
+- HTML5
+- CSS3 (Grid, Flexbox, Custom Properties)
+- JavaScript ES6+
+- Google Fonts (Space Grotesk, Inter, JetBrains Mono)
+
+## Featured Project
+
+**Coqui-Sing** - AI-powered vocal training platform with real-time pitch detection
+
+- Live Demo: https://anthonyjomarq.github.io/Coqui-Sing/
+- Repository: https://github.com/anthonyjomarq/Coqui-Sing
+
+Technologies: React 18, TypeScript, Web Audio API, Redux Toolkit, Web Workers
+
+## Project Structure
+
+```
+/
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── assets/
+    └── images/
+```
+
+## Contact
+
+Anthony J. Colon Dominguez
+
+- Email: anthonyjomar441@gmail.com
+- LinkedIn: https://www.linkedin.com/in/anthonyjomarq/
+- GitHub: https://github.com/anthonyjomarq
+
+## License
+
+MIT License
