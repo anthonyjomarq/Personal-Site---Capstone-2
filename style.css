@@ -612,6 +612,10 @@ body.dark-mode .dark-mode-toggle .sun-icon {
   border-left: 8px solid var(--black);
 }
 
+.card-mobile {
+  border-left: 8px solid #9B59B6;
+}
+
 body.dark-mode .project-card {
   background: var(--dark-surface);
   border: 4px solid var(--dark-text);
@@ -648,6 +652,10 @@ body.dark-mode .card-ml {
 
 body.dark-mode .card-api {
   border-left: 8px solid var(--accent-red);
+}
+
+body.dark-mode .card-mobile {
+  border-left: 8px solid #9B59B6;
 }
 
 .project-card-image img {
@@ -700,6 +708,11 @@ body.dark-mode .card-api {
 
 .tag-api {
   background: var(--black);
+  color: var(--white);
+}
+
+.tag-mobile {
+  background: #9B59B6;
   color: var(--white);
 }
 
@@ -1487,6 +1500,12 @@ body.dark-mode .tag-ml {
 
 body.dark-mode .tag-api {
   background: var(--accent-red);
+  color: var(--white);
+  border-color: #000000;
+}
+
+body.dark-mode .tag-mobile {
+  background: #9B59B6;
   color: var(--white);
   border-color: #000000;
 }
